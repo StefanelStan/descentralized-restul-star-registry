@@ -1,0 +1,27 @@
+{
+  "name": "project_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha --timeout 3000 \"./{,!(node_modules)/**/}*.test.js\""
+  },
+  "author": "Stefanel Stan",
+  "license": "ISC",
+  "dependencies": {
+    "bitcoinjs-message": "^2.0.0",
+    "body-parser": "^1.18.3",
+    "crypto-js": "^3.1.9-1",
+    "express": "^4.16.3",
+    "level": "^4.0.0",
+    "lodash": "^4.17.10",
+    "validator": "^10.8.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "sinon": "^6.3.5",
+    "supertest": "^3.1.0"
+  }
+}

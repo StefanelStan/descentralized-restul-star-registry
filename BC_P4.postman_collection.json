@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "d302393c-5a06-4127-9bc7-b8952befc808",
+		"name": "BC_P4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /block/0",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"user5@yahoo.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/block/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"block",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /block",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"address\": \"14UtjbYhx7shNqXmHe1vAYaLjs9BDC6C4R\",\n\t \"star\": {\n\t    \"dec\": \"-999999° 29 24.9\",\n\t    \"ra\": \"16h 29m 1.0s\",\n\t    \"story\": \"Found star using https://www.google.com/sky/\"\n\t  }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/block",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"block"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /requestValidation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"address\": \"14UtjbYhx7shNqXmHe1vAYaLjs9BDC6C4R\"}"
+				},
+				"url": {
+					"raw": "{{url}}/requestValidation",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"requestValidation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /message-signature/validate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"address\": \"14UtjbYhx7shNqXmHe1vAYaLjs9BDC6C4R\",\r\n\t\"signature\": \"H/k8ybzcVxaP9d1HmuOVbLPA1fmydP/LUqzUtnLQ/hd+EQzLxKkEXMUFCTvHhF9YiSJ+oLuGBpXTkajpBckYsR8=\"\r\n\t\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/message-signature/validate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"message-signature",
+						"validate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /stars/address:14UtjbYhx7shNqXmHe1vAYaLjs9BDC6C4R",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/stars/address:14UtjbYhx7shNqXmHe1vAYaLjs9BDC6C4R",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"stars",
+						"address:14UtjbYhx7shNqXmHe1vAYaLjs9BDC6C4R"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /stars/hash:8b6ea54b077b7eabd669b23c6eb9338abec96a3b7a66b6c10ff7071f6106cbd7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/stars/hash:8b6ea54b077b7eabd669b23c6eb9338abec96a3b7a66b6c10ff7071f6106cbd7",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"stars",
+						"hash:8b6ea54b077b7eabd669b23c6eb9338abec96a3b7a66b6c10ff7071f6106cbd7"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "efb1b9c9-8990-4fc7-9145-075a2805ee87",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "dc20cd7e-6cc1-4089-99da-a49caf078938",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "65af016a-e015-4b56-910c-ff765b723197",
+			"key": "url",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}
